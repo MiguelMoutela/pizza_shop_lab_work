@@ -1,0 +1,13 @@
+  <p>Name: <%= @pizza.pretty_name() %></p>
+  <p>Quantity <%= @pizza.quantity() %></p>
+  <p>Topping: <%= @pizza.topping() %></p>
+  <p>Total: <%= @pizza.total() %></p>
+  <p>Price per unit: <%= @pizza.price() %></p>
+
+  <form method="post" action="/pizzas/<%=@pizza.id%>/update">
+  <input type= "submit" value= "Change Order">
+  </form>
+
+  <form method="post" action="/pizzas/<%=@pizza.id%>/delete">
+  <input type= "submit" value= "Delete Order">
+  </form>
